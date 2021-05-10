@@ -21,22 +21,37 @@ file_to_load = os.path.join("Resources","election_results.csv")
 # Assign a variable to ssave the file to a path
 file_to_save = os.path.join("analysis","election_analysis.txt")
 
+# Initialize variable to count votes
+total_votes = 0
+
+# Candidate options
+candidate_options = []
+
 # Open the election results and read the file
 with open(file_to_load) as election_data:
-    
-    #Read the file object with the reader function
     file_reader = csv.reader(election_data)
 
-    # Read and print the header row.
+    # Read the header row.
     headers = next(file_reader)
-    print(headers)
-
+    
     # Print each row in the CSV file.
-    #for row in file_reader:
-        #print (row)
+    for row in file_reader:
+        #Add to the total vote count
+        total_votes += 1
+
+        # Print the candidate name from each row
+        candidate_name = row[2]
+
+        # if the candidate does not match any existing candidate
+        if candidate_name not in candidate_options:
+            # Add it to the list of candidates
+            candidate_options.append(candidate_name)
+
+    #Print the candidate list
+    print(candidate_options)
 
     # To do: perform analysis
-    print(election_data)
+    print(total_votes)
     
 
 #Using the with statement open the file as a text file
