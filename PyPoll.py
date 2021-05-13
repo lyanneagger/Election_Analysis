@@ -67,6 +67,12 @@ for candidate_name in candidate_votes:
     # 4. Print the candidate name and percentage of votes.
     print(f"{candidate_name}: received {vote_percentage:.1f}% of the vote.")
 
+# Winning Candidate and Winning Count Tracker
+winning_candidate = ""
+winning_count = 0
+winning_percentage = 0
+
+
 
 #Using the with statement open the file as a text file
 with open(file_to_save,"w") as txt_file:
