@@ -12,7 +12,7 @@ This analysis uses Python to determine candidate votes in total and per county, 
 ## Election-Audit Results
 
 - A total of 369,711 votes were cast in this congressional election.
-- Denver County had 82.8% of the total votes (306,055 votes). <br>
+- Denver County had 82.8% of the total votes (306,055 votes).<br>
   Jefferson County had 10.5% of the total votes (38.855 votes).<br>
   Arapahoe County had 6.7% of the total votes (24,801 votes).
 - Denver County had the largest number of votes.
@@ -24,4 +24,5 @@ This analysis uses Python to determine candidate votes in total and per county, 
 
 ## Election-Audit Summary
 
-In a summary statement, provide a business proposal to the election commission on how this script can be used—with some modifications—for any election. Give at least two examples of how this script can be modified to be used for other elections.
+This script can easily be used to audit any election with only a few minor changes. Once the data is saved into a csv file, the path to load the data file would change:
+`file_to_load = os.path.join("Resources", "election_results.csv")`. Similarly, the path to save the results would change based on the file path: `file_to_save = os.path.join("analysis","election_analysis.txt")`. The script could also scale to different levels, replacing "county" results with city, district, or state results to bring in other election results, whether they be congressional, local council, mayoral, or gubernatorial races.
