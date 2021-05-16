@@ -27,4 +27,6 @@ This analysis uses Python to determine candidate votes in total and per county, 
 This script can easily be used to audit any election with only a few minor changes. Once the data is saved into a csv file, the path to load the data file would change:<br>
 `file_to_load = os.path.join("Resources", "election_results.csv")`.<br>
  Similarly, the path to save the results would change based on the file path:<br> `file_to_save = os.path.join("analysis","election_analysis.txt")`.<br>
-The script could also scale to different levels, replacing "county" results with city, district, or state results to bring in other election results, whether they be congressional, local council, mayoral, or gubernatorial races.
+
+
+The script could also scale to different levels, replacing "county" results with city, district, or state results to bring in other election results, whether they be congressional, local council, mayoral, or gubernatorial races. Making the slight modifications to look at district or city results would give a better picture of turnout throughout different areas of local elections. This script could also be altered to scale up to analyze larger elections, even including presidential elections. The "county" breakdown could be changed to a state view, or we could add another layer to include county breakdown within the state breakdown and consider the electoral college votes each state gets as well. 
